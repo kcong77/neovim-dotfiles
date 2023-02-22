@@ -1,2 +1,5 @@
-require "options"
-require "plugins"
+require "core.options"
+require "core.plugins"
+require "configs.tokyonight"
+require "configs.autopairs"
+require "configs.treesitter"

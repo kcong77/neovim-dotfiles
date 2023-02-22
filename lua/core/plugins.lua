@@ -1,4 +1,4 @@
--- Automatically install packer
+-- Automatically install packer at first launch
 local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -23,8 +23,8 @@ vim.cmd([[
 ]])
 
 -- Safe call
-local packer_status_ok, packer = pcall(require, "packer")
-if not packer_status_ok then
+local packer_ok, packer = pcall(require, "packer")
+if not packer_ok then
 	return
 end
 
@@ -39,10 +39,17 @@ packer.init({
 
 -- Install plugins 
 return packer.startup(function(use)
-	-- Packer manage itsefl and dependencies
+	-- Packer manage itself and dependencies
 	use({ "wbthomason/packer.nvim" })
 	use({ "nvim-lua/plenary.nvim" })
 	use({ "nvim-lua/popup.nvim" })
+
+  -- Auto close bracket
+	use({ "windwp/nvim-autopairs" })
+  -- Theme
+	use({ "folke/tokyonight.nvim" })
+	-- Syntax highlighting
+	use({ "nvim-treesitter/nvim-treesitter" })
 
 	-- Automatically set up after cloning packer.nvim
 	if PACKER_BOOTSTRAP then
