@@ -1,5 +1,5 @@
-local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
-if not lspconfig_status_ok then
+local lspconfig_ok, lspconfig = pcall(require, "lspconfig")
+if not lspconfig_ok then
   return
 end
 
@@ -34,8 +34,7 @@ local default_cmp_capabilities = require("cmp_nvim_lsp").default_capabilities(ca
 local clangd_capabilities = default_cmp_capabilities
 clangd_capabilities.offsetEncoding = "utf-8"
 
-local on_attach = function(client, bufnr)
-  vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+local on_attach = function(client)
   client.server_capabilities.document_formatting = false
 end
 

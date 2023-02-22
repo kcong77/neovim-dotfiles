@@ -3,5 +3,6 @@
 - nvim
 - curl
 - tar
+- ripgrep
 
 > recommended using nerd fonts
