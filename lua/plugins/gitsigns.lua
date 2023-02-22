@@ -3,4 +3,4 @@ if not gitsigns_ok then
 	return
 end
 
-gitsigns.setup()
+gitsigns.setup({})

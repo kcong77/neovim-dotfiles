@@ -4,8 +4,8 @@ if not treesitter_ok then
 end
 
 treesitter.setup({
- ensure_installed = "all", 
-  sync_install = false,
+ ensure_installed = {"vim", "lua", "python", "markdown", "c", "cpp", "javascript", "typescript", "html", "css", "scss", "json" }, 
+  sync_install = true,
   ignore_install = {},
   highlight = {
     enable = true, 
