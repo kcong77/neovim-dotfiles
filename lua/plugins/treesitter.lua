@@ -19,7 +19,7 @@ treesitter.setup({
     "python",
     "yaml",
   },
-  sync_install = true,
+  sync_install = false,
   ignore_install = {},
   highlight = {
     enable = true,

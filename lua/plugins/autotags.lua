@@ -10,4 +10,5 @@ if not at_ok then
   return
 end
 
+print(treesitter)
 at.setup()
