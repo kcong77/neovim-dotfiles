@@ -15,7 +15,7 @@ local diagnostics = {
 
 local diff = {
   "diff",
-  colored = true,
+  colored = false,
   symbols = { added = " ", modified = " ", removed = " " },
 }
 
