@@ -77,7 +77,7 @@ return packer.startup(function(use)
   -- Git change
   use({ "lewis6991/gitsigns.nvim" })
   -- File Explorer
-  use({ "kyazdani42/nvim-tree.lua" })
+  use({ "kyazdani42/nvim-tree.lua", commit = "5b554a9e2d910407a8822a321cb909d0babb1c2f" })
   -- Status bar
   use({ "nvim-lualine/lualine.nvim" })
   -- Keymaps

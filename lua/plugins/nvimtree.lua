@@ -3,20 +3,13 @@ if not nvimtree_ok then
   return
 end
 
-local config_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
-if not config_ok then
-  return
-end
-
-local tree_cb = nvim_tree_config.nvim_tree_callback
-
 nvimtree.setup({
   update_focused_file = {
     enable = true,
     update_cwd = true,
   },
   renderer = {
-    special_files = { "Cargo.toml", "Makefile", "README.md", "Dockerfile", ".gitignore", "LICENSE" },
+    special_files = { "Cargo.toml", "Makefile", "README.md", "Dockerfile", "LICENSE" },
     root_folder_modifier = ":~",
     icons = {
       glyphs = {
@@ -62,7 +55,6 @@ nvimtree.setup({
     mappings = {
       list = {
         { key = "r", action = "rename" },
-        { key = "v", cb = tree_cb("vsplit") },
         { key = "d", action = "remove" },
       },
     },
