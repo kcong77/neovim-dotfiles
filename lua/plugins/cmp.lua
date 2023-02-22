@@ -64,10 +64,21 @@ cmp.setup({
     end,
   },
   mapping = cmp.mapping.preset.insert({
+    ["<S-Tab>"] = cmp.mapping(function(fallback)
+      local col = vim.fn.col(".") - 1
+
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif col == 0 or vim.fn.getline("."):sub(col, col):match("%s") then
+        fallback()
+      else
+        cmp.complete()
+      end
+    end, { "i", "s" }),
     ["<C-e>"] = cmp.mapping.close(),
     ["<CR>"] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
-      select = false,
+      select = true,
     }),
   }),
   sources = cmp.config.sources({

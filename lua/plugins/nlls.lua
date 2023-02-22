@@ -4,7 +4,7 @@ if not nlls_ok then
 end
 
 local formatting = nlls.builtins.formatting
-local diagnostics = nlls.builtins.diagnostics
+-- local diagnostics = nlls.builtins.diagnostics
 
 nlls.setup({
   sources = {
@@ -39,13 +39,13 @@ nlls.setup({
       command = "prettierd",
     }),
 
-    diagnostics.eslint_d.with({
-      diagnostic_config = {
-        underline = false,
-        signs = true,
-        virtual_text = false,
-        severity_sort = true,
-      },
-    }),
+    -- diagnostics.eslint_d.with({
+    --   diagnostic_config = {
+    --     underline = false,
+    --     signs = true,
+    --     virtual_text = false,
+    --     severity_sort = true,
+    --   },
+    -- }),
   },
 })

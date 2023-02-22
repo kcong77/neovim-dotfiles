@@ -90,6 +90,8 @@ return packer.startup(function(use)
   use({ "norcalli/nvim-colorizer.lua" })
   -- Blankline
   use({ "lukas-reineke/indent-blankline.nvim" })
+  -- Auto rename and close tag
+  use({ "windwp/nvim-ts-autotag" })
 
   -- Automatically set up after cloning packer.nvim
   if PACKER_BOOTSTRAP then

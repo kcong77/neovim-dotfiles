@@ -66,6 +66,11 @@ lspconfig.bashls.setup({
   capabilities = default_cmp_capabilities,
 })
 
+lspconfig.pyright.setup({
+  on_attach = on_attach,
+  capabilities = clangd_capabilities,
+})
+
 lspconfig.tsserver.setup({
   on_attach = on_attach,
   capabilities = default_cmp_capabilities,
@@ -81,7 +86,7 @@ lspconfig.html.setup({
   capabilities = default_cmp_capabilities,
 })
 
-lspconfig.pyright.setup({
+lspconfig.emmet_ls.setup({
   on_attach = on_attach,
   capabilities = clangd_capabilities,
 })

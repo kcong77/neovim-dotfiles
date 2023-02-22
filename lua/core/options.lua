@@ -26,3 +26,4 @@ set.cmdheight = 1
 set.backup = false
 
 set.clipboard = "unnamedplus"
+set.completeopt = { "menu", "menuone", "noselect" }
