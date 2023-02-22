@@ -43,6 +43,8 @@ return packer.startup(function(use)
 	use({ "wbthomason/packer.nvim" })
 	use({ "nvim-lua/plenary.nvim" })
 	use({ "nvim-lua/popup.nvim" })
+  -- Icons
+	use({ "kyazdani42/nvim-web-devicons" })
 
   -- Auto close bracket
 	use({ "windwp/nvim-autopairs" })
@@ -50,6 +52,24 @@ return packer.startup(function(use)
 	use({ "folke/tokyonight.nvim" })
 	-- Syntax highlighting
 	use({ "nvim-treesitter/nvim-treesitter" })
+	-- Speedup startup time
+	use({ "lewis6991/impatient.nvim" })
+	-- Git change
+	use({ "lewis6991/gitsigns.nvim" })
+	-- File Explorer
+	use({ "kyazdani42/nvim-tree.lua" })
+	-- Status bar
+	use({ "nvim-lualine/lualine.nvim" })
+	-- Keymaps
+	use({ "folke/which-key.nvim" })
+	-- Close tab
+	use({ "ojroques/nvim-bufdel" })
+	-- Tab
+	use({ "akinsho/bufferline.nvim" })
+	-- Color
+	use({ "norcalli/nvim-colorizer.lua" })
+	-- Blankline
+	use({ "lukas-reineke/indent-blankline.nvim" })
 
 	-- Automatically set up after cloning packer.nvim
 	if PACKER_BOOTSTRAP then
