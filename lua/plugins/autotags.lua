@@ -1,5 +1,5 @@
 -- Safe call to check if treesitter is installed
-local treesitter_ok = pcall(require, "nvim-treesitter.configs")
+local treesitter_ok, treesitter = pcall(require, "nvim-treesitter.configs")
 if not treesitter_ok then
   return
 end
