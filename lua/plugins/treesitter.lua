@@ -12,7 +12,7 @@ treesitter.setup({
     "bash",
     "javascript",
     "typescript",
-    "markdown",
+    "markdown_inline",
     "css",
     "scss",
     "html",
