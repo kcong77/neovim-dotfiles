@@ -1,15 +1,23 @@
-require "core.options"
-require "core.plugins"
+require("core.options")
+require("core.plugins")
 
-require "plugins.tokyonight"
-require "plugins.autopairs"
-require "plugins.treesitter"
-require "plugins.impatient"
-require "plugins.lualine"
-require "plugins.nvimtree"
-require "plugins.gitsigns"
-require "plugins.wk"
-require "plugins.bufferline"
-require "plugins.bufdel"
-require "plugins.colorizer"
-require "plugins.blankline"
+require("plugins.tokyonight")
+require("plugins.treesitter")
+require("plugins.impatient")
+require("plugins.lualine")
+require("plugins.nvimtree")
+require("plugins.gitsigns")
+require("plugins.wk")
+require("plugins.bufferline")
+require("plugins.bufdel")
+require("plugins.autopairs")
+require("plugins.colorizer")
+require("plugins.blankline")
+require("plugins.telescope")
+require("plugins.comment")
+require("plugins.cmp")
+require("plugins.format")
+require("plugins.alpha")
+
+require("plugins.LSP.installer")
+require("plugins.LSP.lspconfig")

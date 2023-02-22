@@ -1,10 +1,9 @@
 local bufdel_ok, bufdel = pcall(require, "bufdel")
 if not bufdel_ok then
-	return
+  return
 end
 
 bufdel.setup({
-	next = "tabs",
-	quit = true,
+  next = "tabs",
+  quit = true,
 })
-

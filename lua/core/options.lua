@@ -26,4 +26,3 @@ set.cmdheight = 1
 set.backup = false
 
 set.clipboard = "unnamedplus"
-

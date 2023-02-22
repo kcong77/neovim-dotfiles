@@ -16,7 +16,7 @@ nvimtree.setup({
     update_cwd = true,
   },
   renderer = {
-    special_files = { "Cargo.toml", "Makefile", "README.md", "Dockerfile" },
+    special_files = { "Cargo.toml", "Makefile", "README.md", "Dockerfile", ".gitignore", "LICENSE" },
     root_folder_modifier = ":~",
     icons = {
       glyphs = {
@@ -68,4 +68,3 @@ nvimtree.setup({
     },
   },
 })
-
