@@ -17,7 +17,7 @@ set.splitright = true
 
 set.updatetime = 250
 set.termguicolors = true
-set.smartindent = true
+set.smartindent = false
 set.wrap = false
 
 set.smartcase = true
