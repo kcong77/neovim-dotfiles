@@ -64,7 +64,7 @@ cmp.setup({
     end,
   },
   mapping = cmp.mapping.preset.insert({
-    ["<S-Tab>"] = cmp.mapping(function(fallback)
+    ["<Tab>"] = cmp.mapping(function(fallback)
       local col = vim.fn.col(".") - 1
 
       if cmp.visible() then
