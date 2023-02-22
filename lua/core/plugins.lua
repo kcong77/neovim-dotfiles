@@ -71,7 +71,7 @@ return packer.startup(function(use)
   -- Theme
   use({ "folke/tokyonight.nvim" })
   -- Syntax highlighting
-  use({ "nvim-treesitter/nvim-treesitter" })
+  use({ "nvim-treesitter/nvim-treesitter", require = "windwp/nvim-ts-autotag" })
   -- Speedup startup time
   use({ "lewis6991/impatient.nvim" })
   -- Git change
@@ -90,8 +90,6 @@ return packer.startup(function(use)
   use({ "norcalli/nvim-colorizer.lua" })
   -- Blankline
   use({ "lukas-reineke/indent-blankline.nvim" })
-  -- Auto rename and close tag
-  use({ "windwp/nvim-ts-autotag" })
 
   -- Automatically set up after cloning packer.nvim
   if PACKER_BOOTSTRAP then
