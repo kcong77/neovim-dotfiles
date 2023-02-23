@@ -22,6 +22,7 @@ treesitter.setup({
     "json",
     "markdown",
     "markdown_inline",
+    "gitignore",
   },
   sync_install = true,
   auto_install = true,
