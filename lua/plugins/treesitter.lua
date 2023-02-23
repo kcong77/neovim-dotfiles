@@ -21,6 +21,7 @@ treesitter.setup({
     "yaml",
     "json",
     "markdown",
+    "markdown_inline",
   },
   sync_install = true,
   auto_install = true,
