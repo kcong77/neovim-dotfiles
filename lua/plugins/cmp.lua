@@ -1,3 +1,4 @@
+-- Safe call
 local cmp_ok, cmp = pcall(require, "cmp")
 if not cmp_ok then
   return
@@ -8,6 +9,7 @@ if not luasnip_ok then
   return
 end
 
+-- Icons
 local kind_icons = {
   Text = "",
   Method = "m",
@@ -75,6 +77,9 @@ cmp.setup({
         cmp.complete()
       end
     end, { "i", "s" }),
+    ["<C-b>"] = cmp.mapping.scroll_docs( -4),
+    ["<C-f>"] = cmp.mapping.scroll_docs(4),
+    ["<C-Space>"] = cmp.mapping.complete(),
     ["<C-e>"] = cmp.mapping.close(),
     ["<CR>"] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,

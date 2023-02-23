@@ -1,3 +1,4 @@
+-- Safe call
 local bufferline_ok, bufferline = pcall(require, "bufferline")
 if not bufferline_ok then
   return

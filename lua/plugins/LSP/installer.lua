@@ -1,3 +1,4 @@
+-- Safe call
 local mason_ok, mason = pcall(require, "mason")
 if not mason_ok then
   return
@@ -8,6 +9,7 @@ if not installer_ok then
   return
 end
 
+-- Icons
 mason.setup({
   ui = {
     icons = {

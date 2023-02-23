@@ -22,13 +22,13 @@ vim.cmd([[
   augroup end
 ]])
 
--- Safe call
+-- Safe call packer so we don't get error on first clone
 local packer_ok, packer = pcall(require, "packer")
 if not packer_ok then
   return
 end
 
--- Have packer use a popup window
+-- Set packer to use popup window
 packer.init({
   display = {
     open_fn = function()
@@ -58,6 +58,7 @@ return packer.startup(function(use)
   -- Snippet
   use({ "saadparwaiz1/cmp_luasnip" })
   use({ "L3MON4D3/LuaSnip" })
+  use({ "rafamadriz/friendly-snippets" })
   -- Format
   use({ "jose-elias-alvarez/null-ls.nvim" })
   -- Telescope

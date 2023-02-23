@@ -1,25 +1,29 @@
+-- Safe call
 local treesitter_ok, treesitter = pcall(require, "nvim-treesitter.configs")
 if not treesitter_ok then
   return
 end
 
+-- Settings
 treesitter.setup({
   ensure_installed = {
     "vim",
     "lua",
+    "bash",
     "c",
     "cpp",
-    "bash",
+    "python",
     "javascript",
     "typescript",
-    "markdown",
     "css",
     "scss",
     "html",
-    "python",
     "yaml",
+    "json",
+    "markdown",
   },
   sync_install = true,
+  auto_install = true,
   ignore_install = {},
   highlight = {
     enable = true,

@@ -1,3 +1,4 @@
+-- Safe call
 local alpha_ok, alpha = pcall(require, "alpha")
 if not alpha_ok then
   return

@@ -1,9 +1,10 @@
+-- Safe call
 local wk_ok, wk = pcall(require, "which-key")
 if not wk_ok then
   return
 end
 
-local keymap = vim.api.nvim_set_keymap
+-- Setup appearance of popup
 local setup = {
   window = {
     border = "rounded",
@@ -19,8 +20,12 @@ local setup = {
     align = "center",
   },
 }
+
+-- Keymaps settings for builtin function
+local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
+-- Keymaps settings for which key
 local wkopts = {
   mode = "n",
   prefix = "<leader>",
@@ -30,14 +35,15 @@ local wkopts = {
   nowait = true,
 }
 
+-- Mappings
 local mappings = {
   ["e"] = { "<CMD>NvimTreeToggle<CR>", "File Explorer" },
-  ["w"] = { "<CMD>BufDel<CR>", "Close tab" },
+  ["w"] = { "<CMD>BufDel<CR>", "Close Tab" },
   ["q"] = { "<CMD>qa<CR>", "Quit" },
   ["s"] = { "<CMD>lua vim.lsp.buf.format()<CR><CMD>w<CR>", "Save & Format" },
   ["f"] = {
     "<CMD>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Find files",
+    "Find Files",
   },
   ["g"] = { "<CMD>Telescope live_grep theme=ivy<CR>", "Find In Current Folder" },
   ["h"] = { "<CMD>Telescope current_buffer_fuzzy_find theme=ivy<CR>", "Find In Current File" },
@@ -58,5 +64,6 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "<S-l>", "<CMD>bnext<CR>", opts)
 keymap("n", "<S-h>", "<CMD>bprevious<CR>", opts)
 
+-- Init with settings
 wk.setup(setup)
 wk.register(mappings, wkopts)
