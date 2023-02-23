@@ -5,4 +5,7 @@ end
 
 colorizer.setup({
   "*",
+  css = { css = true, mode = "foreground" },
+}, {
+  mode = "foreground",
 })
